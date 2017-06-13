@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
         if (canMove) {
             if(rb.velocity.magnitude > 3f) {
-                Debug.Log("Stop!");
+                //Debug.Log("Stop!");
             } else {
                 Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             }
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void Move(float x, float z) {
-        Debug.Log(x + ", " + z);
+        //Debug.Log(x + ", " + z);
         rb.AddForce(new Vector3(x * moveWeight, 0f, z * moveWeight));
     }
 
