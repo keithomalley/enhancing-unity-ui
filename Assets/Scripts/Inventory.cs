@@ -9,8 +9,11 @@ public class Inventory : MonoBehaviour {
     public GameObject[] grid;
     public GameObject itemPrefab;
 
-    void Start() {
+    void Awake() {
         Instance = this;
+    }
+
+    void Start() {
         HideInventory();
     }
 

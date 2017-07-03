@@ -9,8 +9,11 @@ public class PlayerInventory : MonoBehaviour {
 
     public int gold = 30;
 
-    void Start() {
+    void Awake() {
         Instance = this;
+    }
+
+    void Start() {
         Inventory.Instance.SetItems(items);
         Shop.Instance.SetShopItems();
     }
